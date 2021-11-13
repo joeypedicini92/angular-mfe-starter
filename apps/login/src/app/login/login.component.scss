@@ -1,0 +1,20 @@
+:host {
+  .container {
+    padding-top: 40px;
+    max-width: 870px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  
+  
+    @media (min-width: 768px) {
+      width: 750px;
+    }
+  }
+  
+  .flex-form {
+    display: flex;
+    flex-direction: column;
+  }
+}

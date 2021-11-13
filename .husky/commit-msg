@@ -1,0 +1,18 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+MESSAGE=`head -n 1 "$1"`
+PATTERN="^([A-Z]+)\-[0-9]+\:\ (.*)$"
+
+if [[ "$MESSAGE" =~ ^WIP ]]; then
+    exit 0
+fi
+
+if [[ "$MESSAGE" =~ ^Merge ]]; then
+    exit 0
+fi
+
+if ! [[ "$MESSAGE" =~ $PATTERN ]]; then
+    echo "ERROR: Commit message did not match 'JP-11: message'"
+    exit 1
+fi

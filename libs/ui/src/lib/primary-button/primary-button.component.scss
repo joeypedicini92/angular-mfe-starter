@@ -1,0 +1,35 @@
+@import '../../styles/colors.scss';
+
+.disabled-button {
+  background-color: $starter-gray-light;
+  box-shadow: none;
+}
+
+.primary-button {
+  color: $starter-white;
+  background-color: $starter-orange;
+  box-shadow: $starter-orange-light-background;
+  text-transform: uppercase;
+  border: none;
+  &:not([disabled]):hover {
+    background-color: $starter-white;
+    border: 1px solid $starter-orange;
+    color: $starter-black;
+  }
+  &[disabled] {
+    @extend .disabled-button;
+  }
+
+}
+
+:host {
+  button {
+    height: 50px;
+    min-width: 100px;
+    @extend .primary-button;
+  }
+
+  .mat-spinner {
+    margin: auto;
+  }
+}

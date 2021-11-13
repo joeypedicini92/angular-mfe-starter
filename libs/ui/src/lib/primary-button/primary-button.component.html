@@ -1,0 +1,4 @@
+<button mat-flat-button color="primary" [disabled]="disabled" type="submit">
+  <mat-spinner color="accent" diameter="40" *ngIf="loading; else text"></mat-spinner>
+  <ng-template #text>{{display}}</ng-template>
+</button>

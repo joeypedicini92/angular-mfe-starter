@@ -1,0 +1,1181 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "FormTitleTextComponent",
+            "id": "component-FormTitleTextComponent-4216b9110a056ce04750d629f0df8a00",
+            "file": "src/lib/form-title-text/form-title-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "starter-form-title-text",
+            "styleUrls": [
+                "./form-title-text.component.scss"
+            ],
+            "styles": [],
+            "template": "<p>{{ text }}</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'starter-form-title-text',\n  template: `<p>{{ text }}</p>`,\n  styleUrls: ['./form-title-text.component.scss'],\n})\nexport class FormTitleTextComponent {\n  @Input() text: string;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\n  p {\n    font-size: 1.25em;\n    font-weight: 700;\n    text-decoration: underline;\n  }\n}",
+                    "styleUrl": "./form-title-text.component.scss"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-cc91c103dd3314be53a6b0ab1aad0cce",
+            "file": "src/lib/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{ provide: MatFormFieldControl, useExisting: InputComponent }",
+                    "type": "component"
+                }
+            ],
+            "selector": "starter-input",
+            "styleUrls": [
+                "./input.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 79,
+                    "type": "boolean"
+                },
+                {
+                    "name": "internalControl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 47,
+                    "type": "FormControl"
+                },
+                {
+                    "name": "placeholder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "string"
+                },
+                {
+                    "name": "required",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 66,
+                    "type": "boolean"
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "InputType"
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "_formControl",
+                    "defaultValue": "new FormControl(null)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 55,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 44,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "InputType",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getValidators",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Record<string, boolean>",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "handleInput",
+                    "args": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 94,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { coerceBooleanProperty } from '@angular/cdk/coercion';\nimport { Component, Input } from '@angular/core';\nimport {\n  AbstractControl,\n  FormControl,\n  Validators,\n} from '@angular/forms';\nimport { MatFormFieldControl } from '@angular/material/form-field';\nimport { InputType } from './input.types';\n\n@Component({\n  selector: 'starter-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.scss'],\n  providers: [\n    { provide: MatFormFieldControl, useExisting: InputComponent },\n  ],\n})\nexport class InputComponent {\n  @Input()\n  get type(): InputType {\n    return this._type;\n  }\n  set type(value: InputType) {\n    this._type = value;\n  }\n  private _type: InputType = 'text';\n\n  @Input()\n  get value(): string {\n    return this._formControl.value;\n  }\n  set value(value: string) {\n    this._formControl.setValue(value);\n  }\n\n  @Input()\n  get placeholder(): string {\n    return this._placeholder;\n  }\n  set placeholder(value: string) {\n    this._placeholder = value;\n  }\n  private _placeholder = '';\n\n  @Input()\n  get internalControl(): FormControl {\n    return this._formControl;\n  }\n  set internalControl(value: FormControl) {\n    if (value) {\n      this._formControl = value;\n    }\n  }\n  private _formControl = new FormControl(null);\n\n  private getValidators(): Record<string, boolean> {\n    if (this._formControl.validator) {\n      return this._formControl.validator({} as AbstractControl) || {};\n    } else {\n      return {};\n    }\n  }\n\n  @Input()\n  get required(): boolean {\n    return this.getValidators().required || false;\n  }\n\n  set required(value: boolean) {\n    if (coerceBooleanProperty(value)) {\n      this._formControl.addValidators(Validators.required);\n    } else {\n      this._formControl.removeValidators(Validators.required);\n    }\n  }\n\n  @Input()\n  get disabled(): boolean {\n    return this._formControl.disabled;\n  }\n  set disabled(value: boolean) {\n    if (coerceBooleanProperty(value)) {\n      this._formControl.disable();\n    } else {\n      this._formControl.enable();\n    }\n  }\n\n  get errors(): Record<string, any> {\n    return this._formControl?.errors;\n  }\n\n  handleInput(inputText: string) {\n    this.value = inputText;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "type": {
+                    "name": "type",
+                    "setSignature": {
+                        "name": "type",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "InputType",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 24,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "InputType",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "type",
+                        "type": "",
+                        "returnType": "InputType",
+                        "line": 21
+                    }
+                },
+                "value": {
+                    "name": "value",
+                    "setSignature": {
+                        "name": "value",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 33,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "value",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 30
+                    }
+                },
+                "placeholder": {
+                    "name": "placeholder",
+                    "setSignature": {
+                        "name": "placeholder",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 41,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "placeholder",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 38
+                    }
+                },
+                "internalControl": {
+                    "name": "internalControl",
+                    "setSignature": {
+                        "name": "internalControl",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "FormControl",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 50,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "FormControl",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "internalControl",
+                        "type": "",
+                        "returnType": "FormControl",
+                        "line": 47
+                    }
+                },
+                "required": {
+                    "name": "required",
+                    "setSignature": {
+                        "name": "required",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 70,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "required",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 66
+                    }
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "setSignature": {
+                        "name": "disabled",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 82,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "disabled",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 79
+                    }
+                },
+                "errors": {
+                    "name": "errors",
+                    "getSignature": {
+                        "name": "errors",
+                        "type": "",
+                        "returnType": "Record<string, any>",
+                        "line": 90
+                    }
+                }
+            },
+            "templateData": "<mat-form-field appearance=\"outline\">\n  <mat-label>{{placeholder}}</mat-label>\n  <input [formControl]=\"internalControl\" [type]=\"type\" [value]=\"value\" [required]=\"required\"\n    (change)=\"handleInput($event.target.value)\"\n    matInput>\n  <mat-error id=\"error\" *ngIf=\"errors !== null\">\n    <span *ngIf=\"errors.email\">not a valid email address</span>\n    <span *ngIf=\"errors.minlength\">must be at least {{errors.minlength.requiredLength}}\n      characters</span>\n  </mat-error>\n</mat-form-field>\n"
+        },
+        {
+            "name": "PageTitleComponent",
+            "id": "component-PageTitleComponent-8e4bc901e91ff7f2ff49a167be1eb304",
+            "file": "src/lib/page-title/page-title.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "starter-page-title",
+            "styleUrls": [
+                "./page-title.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./page-title.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'starter-page-title',\n  templateUrl: './page-title.component.html',\n  styleUrls: ['./page-title.component.scss'],\n})\nexport class PageTitleComponent {\n  @Input() text: string;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./page-title.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<h1>{{ text }}</h1>"
+        },
+        {
+            "name": "PrimaryButtonComponent",
+            "id": "component-PrimaryButtonComponent-c3071bdf8e124a002e96c6ea972ebb02",
+            "file": "src/lib/primary-button/primary-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "starter-primary-button",
+            "styleUrls": [
+                "./primary-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./primary-button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Is the button disabled",
+                    "description": "<p>Is the button disabled</p>\n",
+                    "line": 39,
+                    "type": "boolean"
+                },
+                {
+                    "name": "display",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "The text to display in the button",
+                    "description": "<p>The text to display in the button</p>\n",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "loading",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Used to determine if the loading spinner should display and the button be disabled",
+                    "description": "<p>Used to determine if the loading spinner should display and the button be disabled</p>\n",
+                    "line": 24,
+                    "type": "boolean"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "_disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 45,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_display",
+                    "defaultValue": "'submit'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_loading",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 33,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'starter-primary-button',\n  templateUrl: './primary-button.component.html',\n  styleUrls: ['./primary-button.component.scss'],\n})\nexport class PrimaryButtonComponent {\n  /**\n   * The text to display in the button\n   */\n  @Input()\n  get display(): string {\n    return this._display;\n  }\n  set display(value: string) {\n    this._display = value;\n  }\n  private _display = 'submit';\n  /**\n   * Used to determine if the loading spinner should display and the button be disabled\n   */\n  @Input()\n  get loading(): boolean {\n    return this._loading;\n  }\n  set loading(value: boolean) {\n    this._loading = value;\n    if (value) {\n      this._disabled = value;\n    }\n  }\n  private _loading = false;\n\n  /**\n   * Is the button disabled\n   */\n  @Input()\n  get disabled(): boolean {\n    return this._disabled;\n  }\n  set disabled(value: boolean) {\n    this._disabled = value;\n  }\n  private _disabled = false;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../styles/colors.scss';\n\n.disabled-button {\n  background-color: $starter-gray-light;\n  box-shadow: none;\n}\n\n.primary-button {\n  color: $starter-white;\n  background-color: $starter-orange;\n  box-shadow: $starter-orange-light-background;\n  text-transform: uppercase;\n  border: none;\n  &:not([disabled]):hover {\n    background-color: $starter-white;\n    border: 1px solid $starter-orange;\n    color: $starter-black;\n  }\n  &[disabled] {\n    @extend .disabled-button;\n  }\n\n}\n\n:host {\n  button {\n    height: 50px;\n    min-width: 100px;\n    @extend .primary-button;\n  }\n\n  .mat-spinner {\n    margin: auto;\n  }\n}",
+                    "styleUrl": "./primary-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "display": {
+                    "name": "display",
+                    "setSignature": {
+                        "name": "display",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 16,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "display",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 13,
+                        "rawdescription": "The text to display in the button",
+                        "description": "<p>The text to display in the button</p>\n"
+                    }
+                },
+                "loading": {
+                    "name": "loading",
+                    "setSignature": {
+                        "name": "loading",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 27,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "loading",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 24,
+                        "rawdescription": "Used to determine if the loading spinner should display and the button be disabled",
+                        "description": "<p>Used to determine if the loading spinner should display and the button be disabled</p>\n"
+                    }
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "setSignature": {
+                        "name": "disabled",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 42,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "disabled",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 39,
+                        "rawdescription": "Is the button disabled",
+                        "description": "<p>Is the button disabled</p>\n"
+                    }
+                }
+            },
+            "templateData": "<button mat-flat-button color=\"primary\" [disabled]=\"disabled\" type=\"submit\">\n  <mat-spinner color=\"accent\" diameter=\"40\" *ngIf=\"loading; else text\"></mat-spinner>\n  <ng-template #text>{{display}}</ng-template>\n</button>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "UiModule",
+            "id": "module-UiModule-36d85cdd355ce175988ea19e2857469b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/lib/ui.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatInputModule } from '@angular/material/input';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\n\nimport { InputComponent } from './input/input.component';\nimport { PageTitleComponent } from './page-title/page-title.component';\nimport { FormTitleTextComponent } from './form-title-text/form-title-text.component';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatButtonModule } from '@angular/material/button';\nimport {\n  ErrorStateMatcher,\n  ShowOnDirtyErrorStateMatcher,\n} from '@angular/material/core';\nimport { PrimaryButtonComponent } from './primary-button/primary-button.component';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    MatInputModule,\n    FormsModule,\n    ReactiveFormsModule,\n    MatProgressSpinnerModule,\n    MatButtonModule,\n  ],\n  declarations: [\n    InputComponent,\n    PageTitleComponent,\n    FormTitleTextComponent,\n    PrimaryButtonComponent,\n  ],\n  exports: [\n    InputComponent,\n    PageTitleComponent,\n    FormTitleTextComponent,\n    PrimaryButtonComponent,\n  ],\n  providers: [\n    {\n      provide: ErrorStateMatcher,\n      useClass: ShowOnDirtyErrorStateMatcher,\n    },\n  ],\n})\nexport class UiModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "FormTitleTextComponent"
+                        },
+                        {
+                            "name": "InputComponent"
+                        },
+                        {
+                            "name": "PageTitleComponent"
+                        },
+                        {
+                            "name": "PrimaryButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "FormTitleTextComponent"
+                        },
+                        {
+                            "name": "InputComponent"
+                        },
+                        {
+                            "name": "PageTitleComponent"
+                        },
+                        {
+                            "name": "PrimaryButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "getInputElement",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/input/input-test-helpers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(\n  fixture: ComponentFixture<InputComponent>,\n): HTMLInputElement => {\n  return fixture.nativeElement.querySelector('input');\n}"
+            },
+            {
+                "name": "getValidators",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/input/input-test-helpers.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(component: InputComponent) =>\n  component.internalControl.validator({} as AbstractControl)"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/page-title/page-title.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/primary-button/primary-button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormTitleTextComponent>",
+                "defaultValue": "(args: FormTitleTextComponent) => ({\n  component: FormTitleTextComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/page-title/page-title.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PageTitleComponent>",
+                "defaultValue": "(args: PageTitleComponent) => ({\n  component: PageTitleComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/lib/primary-button/primary-button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PrimaryButtonComponent>",
+                "defaultValue": "(args: PrimaryButtonComponent) => ({\n  component: PrimaryButtonComponent,\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "InputType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"email\" | \"password\" | \"text\"",
+                "file": "src/lib/input/input.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "<p>So far these are the only types that I&#39;m confident are supported\nby the input component</p>\n",
+                "kind": 185
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/lib/input/input-test-helpers.ts": [
+                {
+                    "name": "getInputElement",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/input/input-test-helpers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(\n  fixture: ComponentFixture<InputComponent>,\n): HTMLInputElement => {\n  return fixture.nativeElement.querySelector('input');\n}"
+                },
+                {
+                    "name": "getValidators",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/input/input-test-helpers.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(component: InputComponent) =>\n  component.internalControl.validator({} as AbstractControl)"
+                }
+            ],
+            "src/lib/input/input.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(args: InputComponent) => ({\n  component: InputComponent,\n  props: args,\n})"
+                }
+            ],
+            "src/lib/form-title-text/form-title-text.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FormTitleTextComponent>",
+                    "defaultValue": "(args: FormTitleTextComponent) => ({\n  component: FormTitleTextComponent,\n  props: args,\n})"
+                }
+            ],
+            "src/lib/page-title/page-title.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/page-title/page-title.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/page-title/page-title.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PageTitleComponent>",
+                    "defaultValue": "(args: PageTitleComponent) => ({\n  component: PageTitleComponent,\n  props: args,\n})"
+                }
+            ],
+            "src/lib/primary-button/primary-button.component.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/primary-button/primary-button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/lib/primary-button/primary-button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PrimaryButtonComponent>",
+                    "defaultValue": "(args: PrimaryButtonComponent) => ({\n  component: PrimaryButtonComponent,\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/lib/input/input.types.ts": [
+                {
+                    "name": "InputType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"email\" | \"password\" | \"text\"",
+                    "file": "src/lib/input/input.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "<p>So far these are the only types that I&#39;m confident are supported\nby the input component</p>\n",
+                    "kind": 185
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 3,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/form-title-text/form-title-text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/form-title-text/form-title-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormTitleTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/input/input-test-helpers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getInputElement",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/input/input-test-helpers.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getValidators",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/page-title/page-title.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/page-title/page-title.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/page-title/page-title.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageTitleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/primary-button/primary-button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/primary-button/primary-button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/lib/primary-button/primary-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PrimaryButtonComponent",
+                "coveragePercent": 42,
+                "coverageCount": "3/7",
+                "status": "medium"
+            }
+        ]
+    }
+}

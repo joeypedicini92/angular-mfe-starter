@@ -1,0 +1,66 @@
+{
+  "projectType": "library",
+  "root": "libs/ui",
+  "sourceRoot": "libs/ui/src",
+  "prefix": "starter",
+  "targets": {
+    "generate-storybook-docs": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+          "commands": [
+            "yarn exec compodoc -p ./tsconfig.json -e json -d ./.storybook"
+          ],
+          "cwd": "libs/ui"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui"],
+      "options": {
+        "jestConfig": "libs/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui/src/**/*.ts",
+          "libs/ui/src/**/*.html"
+        ]
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/ui/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/ui",
+        "config": {
+          "configFolder": "libs/ui/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

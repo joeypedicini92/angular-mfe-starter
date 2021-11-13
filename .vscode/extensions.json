@@ -1,7 +1,22 @@
 {
   "recommendations": [
-    
     "nrwl.angular-console",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "dbaeumer.vscode-eslint",
+    "angular.ng-template",
+    "nicoespeon.abracadabra",
+    "johnpapa.angular2",
+    "streetsidesoftware.code-spell-checker",
+    "abusaidm.html-snippets",
+    "xabikos.javascriptsnippets",
+    "apk27.ngx-translate-lookup",
+    "quicktype.quicktype",
+    "mrmlnc.vscode-scss",
+    "gruntfuggly.todo-tree",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "atlassian.atlascode",
+    "aaron-bond.better-comments"
   ]
 }

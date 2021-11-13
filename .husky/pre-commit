@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "running pre-commit hook to generate types"
+nx affected --target=generate-types
+touch .commit 
+exit
+
+

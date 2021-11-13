@@ -1,0 +1,11 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{placeholder}}</mat-label>
+  <input [formControl]="internalControl" [type]="type" [value]="value" [required]="required"
+    (change)="handleInput($event.target.value)"
+    matInput>
+  <mat-error id="error" *ngIf="errors !== null">
+    <span *ngIf="errors.email">not a valid email address</span>
+    <span *ngIf="errors.minlength">must be at least {{errors.minlength.requiredLength}}
+      characters</span>
+  </mat-error>
+</mat-form-field>

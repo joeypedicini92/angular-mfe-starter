@@ -1,0 +1,78 @@
+@use "sass:color";
+
+$starter-black: #000000;
+$starter-white: #ffffff;
+$starter-orange: #ffa02f;
+$starter-orange-light: #ffd097;
+$starter-orange-dark: #ff841d;
+$starter-gray: #4f5054;
+$starter-gray-light: #cdcdcd;
+$starter-gray-dark: #4f5054;
+
+$starter-orange-light-background: color.scale($starter-orange, $alpha: -90%);
+
+$starter-orange-palette: (
+    50 : #fff4e6,
+    100 : #ffe3c1,
+    200 : $starter-orange-light,
+    300 : #ffbd6d,
+    400 : #ffae4e,
+    500 : $starter-orange,
+    600 : #ff982a,
+    700 : #ff8e23,
+    800 : $starter-orange-dark,
+    900 : #ff7312,
+    A100 : $starter-white,
+    A200 : #fffbf9,
+    A400 : #ffdbc6,
+    A700 : #ffcbad,
+    contrast: (
+        50 : $starter-black,
+        100 : $starter-black,
+        200 : $starter-black,
+        300 : $starter-black,
+        400 : $starter-black,
+        500 : $starter-black,
+        600 : $starter-black,
+        700 : $starter-black,
+        800 : $starter-black,
+        900 : $starter-black,
+        A100 : $starter-black,
+        A200 : $starter-black,
+        A400 : $starter-black,
+        A700 : $starter-black,
+    )
+);
+
+$starter-gray-palette: (
+    50 : #eaeaea,
+    100 : $starter-gray-light,
+    200 : #a7a8aa,
+    300 : #848587,
+    400 : #696a6e,
+    500 : $starter-gray-dark,
+    600 : #48494d,
+    700 : #3f4043,
+    800 : #36373a,
+    900 : #262729,
+    A100 : #81a8f5,
+    A200 : #5287f2,
+    A400 : #1261ff,
+    A700 : #0052f7,
+    contrast: (
+        50 : $starter-black,
+        100 : $starter-black,
+        200 : $starter-black,
+        300 : $starter-black,
+        400 : $starter-white,
+        500 : $starter-white,
+        600 : $starter-white,
+        700 : $starter-white,
+        800 : $starter-white,
+        900 : $starter-white,
+        A100 : $starter-black,
+        A200 : $starter-black,
+        A400 : $starter-white,
+        A700 : $starter-white,
+    )
+);
