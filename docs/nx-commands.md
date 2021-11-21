@@ -1,4 +1,9 @@
 [back](./index.md)
+# `nx workspace-generator new-micro-app --name "<APP NAME>" --port <APP PORT>`
+* this will create all the files necessary to get an up and running micro app created
+* this uses the code inside of `tools/generators/new-micro-app`
+* if we make any config changes to any project that we want to be made for all future projects, we need to make sure to add the change in those template files
+
 # `nx generate-types`
 * this will generate .d.ts files in the /types directory at the root of this workspace
 * can also run `nx affected --target=generate-types`
