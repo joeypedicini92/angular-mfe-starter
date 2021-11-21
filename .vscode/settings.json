@@ -1,4 +1,7 @@
 {
+  "files.associations": {
+    "**/generators/**/files/**/*": "plaintext"
+  },
   "editor.formatOnSave": true,
   "eslint.workingDirectories": [
     {

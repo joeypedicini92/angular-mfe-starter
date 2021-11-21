@@ -7,10 +7,10 @@
     "generate-storybook-docs": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-          "commands": [
-            "yarn exec compodoc -p ./tsconfig.json -e json -d ./.storybook"
-          ],
-          "cwd": "libs/ui"
+        "commands": [
+          "yarn exec compodoc -p ./tsconfig.json -e json -d ./.storybook"
+        ],
+        "cwd": "libs/ui"
       }
     },
     "test": {

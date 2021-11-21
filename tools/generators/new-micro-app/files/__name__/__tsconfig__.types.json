@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "files": [
+    "src/remote-entry/index.ts"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "../../types"
+  }
+}
